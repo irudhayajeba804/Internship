@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Account</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .account-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            height: 100%;
+            transition: background-color 0.15s ease;
+        }
+
+        .account-card:hover {
+            background-color: #f7fafa;
+            cursor: pointer;
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .card-title {
+            font-size: 16px;
+            color: #0f1111;
+        }
+
+        .card-text {
+            font-size: 14px;
+            color: #565959;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-4">
+        <h1 class="mb-4">Your Account</h1>
+
+        <div class="row g-3">
+            <div class="col-lg-4 col-md-6">
+                <div class="card account-card">
+                    <div class="card-body">
+                        <div class="d-flex gap-3">
+                            <img src="https://m.media-amazon.com/images/G/31/x-locale/cs/ya/images/Box._CB485927553_.png"
+                                class="card-icon" alt="Orders">
+                            <div>
+                                <h5 class="card-title mb-1">Your Orders</h5>
+                                <p class="card-text mb-0">Track, return, or buy things again</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card account-card">
+                    <div class="card-body">
+                        <div class="d-flex gap-3">
+                            <img src="https://m.media-amazon.com/images/G/31/x-locale/cs/ya/images/sign-in-lock._CB485931504_.png"
+                                class="card-icon" alt="Login">
+                            <div>
+                                <h5 class="card-title mb-1">Login & security</h5>
+                                <p class="card-text mb-0">Edit login, name, and mobile number</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card account-card">
+                    <div class="card-body">
+                        <div class="d-flex gap-3">
+                            <img src="data:image/jpeg;base64,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"
+                                class="card-icon" alt="Prime">
+                            <div>
+                                <h5 class="card-title mb-1">Prime</h5>
+                                <p class="card-text mb-0">View benefits and payment settings</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card account-card">
+                    <div class="card-body">
+                        <div class="d-flex gap-3">
+                            <img src="https://m.media-amazon.com/images/G/31/x-locale/cs/ya/images/address-map-pin._CB485934183_.png"
+                                class="card-icon" alt="Addresses">
+                            <div>
+                                <h5 class="card-title mb-1">Your Addresses</h5>
+                                <p class="card-text mb-0">Edit addresses for orders and gifts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card account-card">
+                    <div class="card-body">
+                        <div class="d-flex gap-3">
+                            <img src="https://m.media-amazon.com/images/G/31/AmazonBusiness/YAPATF/amazon_business_yap_atf._CB588250268_.jpg"
+                                class="card-icon" alt="Business">
+                            <div>
+                                <h5 class="card-title mb-1">Your business account</h5>
+                                <p class="card-text mb-0">Sign up for free to save up to 18% with GST invoice and bulk
+                                    discounts and purchase on credit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card account-card">
+                    <div class="card-body">
+                        <div class="d-flex gap-3">
+                            <img src="https://m.media-amazon.com/images/G/31/x-locale/cs/ya/images/Payments._CB485926359_.png"
+                                class="card-icon" alt="Payment">
+                            <div>
+                                <h5 class="card-title mb-1">Payment options</h5>
+                                <p class="card-text mb-0">Edit or add payment methods</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card account-card">
+                    <div class="card-body">
+                        <div class="d-flex gap-3">
+                            <img src="https://m.media-amazon.com/images/G/31/x-locale/cs/ya/images/amazon_pay._CB485946618_.png"
+                                class="card-icon" alt="Amazon Pay">
+                            <div>
+                                <h5 class="card-title mb-1">Amazon Pay balance</h5>
+                                <p class="card-text mb-0">Add money to your balance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card account-card">
+                    <div class="card-body">
+                        <div class="d-flex gap-3">
+                            <img src="https://m.media-amazon.com/images/G/31/x-locale/cs/help/images/gateway/self-service/contact_us._CB623781998_.png"
+                                class="card-icon" alt="Contact">
+                            <div>
+                                <h5 class="card-title mb-1">Contact Us</h5>
+                                <p class="card-text mb-0">Contact our customer service via phone or chat</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
