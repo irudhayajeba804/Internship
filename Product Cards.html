@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .product-card {
+            border: none;
+            position: relative;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .075);
+        }
+
+        .wishlist-icon {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            color: #c2c2c2;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .wishlist-icon:hover {
+            color: #ff6161;
+        }
+
+        .product-img {
+            height: 280px;
+            object-fit: contain;
+            padding: 16px;
+        }
+
+        .rating-badge {
+            background-color: #388e3c;
+            color: white;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 2px 6px;
+            border-radius: 3px;
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .assured-badge {
+            height: 18px;
+        }
+
+        .product-title {
+            font-size: 14px;
+            color: #212121;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            min-height: 42px;
+        }
+
+        .price {
+            font-size: 16px;
+            font-weight: 600;
+            color: #212121;
+        }
+
+        .mrp {
+            font-size: 14px;
+            color: #878787;
+            text-decoration: line-through;
+        }
+
+        .discount {
+            font-size: 13px;
+            font-weight: 600;
+            color: #388e3c;
+        }
+
+        .stock-text {
+            font-size: 12px;
+            color: #d32f2f;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <div class="container py-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+            <div class="col">
+                <div class="card product-card">
+                    <i class="bi bi-heart wishlist-icon"></i>
+                    <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=400&auto=format&fit=crop"
+                        class="card-img-top product-img" alt="Water Bottle">
+                    <div class="card-body px-2 pt-0">
+                        <p class="product-title mb-2">SKYLIFE Smart Buy Premium Quality Water Bottle,Travelli...</p>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="rating-badge">4 <i class="bi bi-star-fill" style="font-size: 10px;"></i></span>
+                            <span class="text-muted" style="font-size: 13px;">(2,020)</span>
+                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png"
+                                class="assured-badge" alt="Assured">
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-1">
+                            <span class="price">₹118</span>
+                            <span class="mrp">₹599</span>
+                            <span class="discount">80% off</span>
+                        </div>
+                        <div class="stock-text">Only few left</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card">
+                    <i class="bi bi-heart wishlist-icon"></i>
+                    <img src="data:image/jpeg;base64,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" class="card-img-top product-img" alt="Water Bottle">
+                    <div class="card-body px-2 pt-0">
+                        <p class="product-title mb-2">ELINOR AMAZING SINGLE WALL STAINLESS STEEL WATERBOTTLE ...</p>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="rating-badge">4.1 <i class="bi bi-star-fill"
+                                    style="font-size: 10px;"></i></span>
+                            <span class="text-muted" style="font-size: 13px;">(16,395)</span>
+                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png"
+                                class="assured-badge" alt="Assured">
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-1">
+                            <span class="price">₹178</span>
+                            <span class="mrp">₹499</span>
+                            <span class="discount">64% off</span>
+                        </div>
+                        <div class="stock-text">Only few left</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card">
+                    <i class="bi bi-heart wishlist-icon"></i>
+                    <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504?w=400&auto=format&fit=crop"
+                        class="card-img-top product-img" alt="Water Bottle">
+                    <div class="card-body px-2 pt-0">
+                        <p class="product-title mb-2">DFit 2 Liter Transparent Motivational leakproof BPA Fre...</p>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="rating-badge">4.1 <i class="bi bi-star-fill"
+                                    style="font-size: 10px;"></i></span>
+                            <span class="text-muted" style="font-size: 13px;">(23,274)</span>
+                            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png"
+                                class="assured-badge" alt="Assured">
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-1">
+                            <span class="price">₹164</span>
+                            <span class="mrp">₹1,288</span>
+                            <span class="discount">87% off</span>
+                        </div>
+                        <div class="stock-text">Only few left</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
